@@ -1,0 +1,18 @@
+version: "3.6"
+
+services:
+  test:
+    image: python-project-template
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    command: bin/test.sh
+    entrypoint: /bin/bash
+    environment:
+      - USER='User'
+    volumes:
+      - ..:/python-project-template
+    network_mode: "bridge"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+

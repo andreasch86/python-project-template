@@ -1,0 +1,10 @@
+# KEEP THIS LIST ALPHABETICAL
+
+# Dev packages
+coverage==5.5
+tox==3.24.2
+setuptools-scm==6.0.1
+
+# Third-party packages
+pandas>=1.3.5
+jupyterlab==3.0.14
