@@ -1,0 +1,17 @@
+version: "3.6"
+
+services:
+  app:
+    image: notebook
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    command: sh /python-project-template/bin/startup.sh
+    working_dir: /python-project-template
+    environment:
+      - USER='User'
+    volumes:
+      - "${HERE}/:/python-project-template/"
+    ports:
+      - "5124:5124"
+    network_mode: "bridge"
